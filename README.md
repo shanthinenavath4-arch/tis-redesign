@@ -1,16 +1,86 @@
-# React + Vite
+# Tulas International School — Premium Website Redesign
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern, responsive and animated homepage redesign for **Tulas International School (TIS)**, created as a Frontend Developer assignment.
 
-Currently, two official plugins are available:
+The project focuses on transforming the existing school website into a premium, engaging and user-friendly digital experience while retaining the core identity of TIS.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🔗 Links
 
-## React Compiler
+- Live Website: https://tis-redesign-lgfp.vercel.app/
+- GitHub Repository: https://github.com/shanthinenavath4-arch/tis-redesign
+- Original Website: https://tis.edu.in/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- Premium editorial-style design
+- Fully responsive layout
+- Light / Dark theme switcher
+- Smooth page transitions
+- Scroll-triggered animations
+- Interactive hover effects
+- Animated hero section
+- Responsive navigation
+- Academic showcase
+- Sports showcase
+- Campus section
+- Testimonials
+- Student experience section
+- Admissions call-to-action
+- Premium footer
+- Accessibility considerations
+- Reduced-motion support
+
+---
+
+## 🛠️ Tech Stack
+
+- React.js
+- Vite
+- JavaScript
+- HTML5
+- CSS3
+- Framer Motion
+- Lucide React
+- Git
+- GitHub
+- Vercel
+
+---
+
+## 📁 Project Structure
+
+```text
+tis-redesign/
+│
+├── public/
+│
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── ThemeToggle.jsx
+│   │   └── ...
+│   │
+│   ├── context/
+│   │   └── ThemeContext.jsx
+│   │
+│   ├── sections/
+│   │   ├── Hero.jsx
+│   │   ├── About.jsx
+│   │   ├── Academics.jsx
+│   │   ├── Sports.jsx
+│   │   ├── Campus.jsx
+│   │   ├── Testimonials.jsx
+│   │   ├── Experience.jsx
+│   │   └── Admissions.jsx
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
