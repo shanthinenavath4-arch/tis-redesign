@@ -8,10 +8,12 @@ import Campus from "./sections/Campus";
 import Testimonials from "./sections/Testimonials";
 import Experience from "./sections/Experience";
 import Admissions from "./sections/Admissions";
+import CustomCursor from "./components/CustomCursor";
 
 function App() {
   return (
     <>
+          <CustomCursor />
       <Navbar />
 
       <main>
