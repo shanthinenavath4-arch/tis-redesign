@@ -1,0 +1,626 @@
+/* ========================================
+   TESTIMONIALS SECTION
+======================================== */
+
+.testimonials-section {
+  position: relative;
+
+  padding: 150px 0;
+
+  overflow: hidden;
+
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+/* ========================================
+   SECTION HEADER
+======================================== */
+
+.testimonials-header > span {
+  display: block;
+
+  margin-bottom: 25px;
+
+  color: var(--text-secondary);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2.5px;
+}
+
+.testimonials-header h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(55px, 7vw, 96px);
+
+  font-weight: 500;
+
+  line-height: 0.92;
+
+  letter-spacing: -3px;
+
+  color: var(--text-primary);
+}
+
+.testimonials-header h2 em {
+  color: var(--accent);
+
+  font-style: italic;
+
+  font-weight: 500;
+}
+
+/* ========================================
+   TESTIMONIAL CARD
+======================================== */
+
+.testimonial-card {
+  position: relative;
+
+  margin-top: 75px;
+
+  padding: 60px;
+
+  min-height: 430px;
+
+  display: grid;
+
+  grid-template-columns: 80px 1fr auto;
+
+  gap: 40px;
+
+  align-items: start;
+
+  /*
+    IMPORTANT:
+    Never use var(--accent) here.
+    In dark mode accent becomes light.
+  */
+  background: var(--accent-surface);
+
+  color: #f4f1e9;
+
+  border-radius: 4px;
+
+  box-shadow:
+    0 25px 60px var(--shadow-color);
+
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+/* ========================================
+   QUOTE ICON
+======================================== */
+
+.testimonial-quote-icon {
+  width: 52px;
+  height: 52px;
+
+  display: grid;
+
+  place-items: center;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.22);
+
+  border-radius: 50%;
+
+  color: #d8dfd2;
+
+  flex-shrink: 0;
+}
+
+/* ========================================
+   TESTIMONIAL CONTENT
+======================================== */
+
+.testimonial-content {
+  max-width: 800px;
+}
+
+.testimonial-content p {
+  margin: 0;
+
+  color: #f4f1e9;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(30px, 4vw, 54px);
+
+  font-weight: 500;
+
+  line-height: 1.1;
+
+  letter-spacing: -1px;
+}
+
+/* ========================================
+   AUTHOR
+======================================== */
+
+.testimonial-author {
+  margin-top: 45px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.testimonial-author strong {
+  color: #f4f1e9;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.testimonial-author span {
+  color: rgba(244, 241, 233, 0.55);
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+}
+
+/* ========================================
+   CONTROLS
+======================================== */
+
+.testimonial-controls {
+  align-self: end;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.testimonial-controls button {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+
+  place-items: center;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.25);
+
+  border-radius: 50%;
+
+  color: #f4f1e9;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.testimonial-controls button:hover {
+  background: #f4f1e9;
+
+  color: var(--accent-surface);
+
+  border-color: #f4f1e9;
+
+  transform: translateY(-2px);
+}
+
+.testimonial-controls > span {
+  color: rgba(244, 241, 233, 0.5);
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+}
+
+/* ========================================
+   PERSONALITIES HEADER
+======================================== */
+
+.personalities-heading {
+  margin-top: 150px;
+
+  margin-bottom: 55px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 0.55fr;
+
+  gap: 80px;
+
+  align-items: end;
+}
+
+.personalities-heading > div > span {
+  display: block;
+
+  margin-bottom: 22px;
+
+  color: var(--text-secondary);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2.5px;
+}
+
+.personalities-heading h3 {
+  margin: 0;
+
+  color: var(--text-primary);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(48px, 6vw, 78px);
+
+  font-weight: 500;
+
+  line-height: 0.92;
+
+  letter-spacing: -2px;
+}
+
+.personalities-heading h3 em {
+  color: var(--accent);
+
+  font-style: italic;
+
+  font-weight: 500;
+}
+
+.personalities-heading > p {
+  max-width: 420px;
+
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+/* ========================================
+   PERSONALITIES GRID
+======================================== */
+
+.personalities-grid {
+  display: grid;
+
+  grid-template-columns:
+    1.1fr
+    0.9fr
+    0.9fr;
+
+  gap: 12px;
+}
+
+.personality-card {
+  overflow: hidden;
+
+  border-radius: 3px;
+}
+
+/* ========================================
+   PERSONALITY IMAGE
+======================================== */
+
+.personality-image {
+  position: relative;
+
+  height: 480px;
+
+  overflow: hidden;
+
+  background: var(--accent-surface);
+}
+
+.personality-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.8s
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.personality-card:hover
+.personality-image img {
+  transform: scale(1.06);
+}
+
+/* ========================================
+   IMAGE OVERLAY
+======================================== */
+
+.personality-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.1),
+      transparent 45%,
+      rgba(0, 0, 0, 0.75)
+    );
+}
+
+/* ========================================
+   PERSONALITY NUMBER
+======================================== */
+
+.personality-number {
+  position: absolute;
+
+  top: 20px;
+  left: 20px;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+/* ========================================
+   PERSONALITY INFO
+======================================== */
+
+.personality-info {
+  position: absolute;
+
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+}
+
+.personality-info h4 {
+  margin: 0 0 6px;
+
+  color: #ffffff;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 28px;
+
+  font-weight: 500;
+}
+
+.personality-info span {
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+  .testimonials-section {
+    padding: 110px 0;
+  }
+
+  /* Testimonial */
+
+  .testimonial-card {
+    padding: 45px;
+
+    grid-template-columns: 55px 1fr;
+
+    gap: 25px;
+  }
+
+  .testimonial-controls {
+    grid-column: 2;
+
+    align-self: auto;
+
+    margin-top: 15px;
+  }
+
+  /* Personalities */
+
+  .personalities-heading {
+    margin-top: 110px;
+
+    grid-template-columns: 1fr 0.7fr;
+
+    gap: 40px;
+  }
+
+  .personalities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .personality-card:first-child {
+    grid-column: span 2;
+  }
+
+  .personality-image {
+    height: 420px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+  .testimonials-section {
+    padding: 90px 0;
+  }
+
+  /* Header */
+
+  .testimonials-header > span {
+    margin-bottom: 20px;
+  }
+
+  .testimonials-header h2 {
+    font-size: clamp(45px, 13vw, 62px);
+
+    letter-spacing: -1.5px;
+  }
+
+  /* Testimonial */
+
+  .testimonial-card {
+    margin-top: 50px;
+
+    padding: 28px;
+
+    min-height: 440px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+    border-radius: 3px;
+  }
+
+  .testimonial-quote-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .testimonial-content {
+    max-width: 100%;
+  }
+
+  .testimonial-content p {
+    font-size: 29px;
+
+    line-height: 1.08;
+
+    letter-spacing: -0.5px;
+  }
+
+  .testimonial-author {
+    margin-top: 30px;
+  }
+
+  .testimonial-controls {
+    margin-top: auto;
+
+    align-self: flex-end;
+  }
+
+  /* Personalities */
+
+  .personalities-heading {
+    margin-top: 90px;
+
+    margin-bottom: 40px;
+
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .personalities-heading h3 {
+    font-size: clamp(43px, 12vw, 58px);
+
+    letter-spacing: -1.5px;
+  }
+
+  .personalities-heading > p {
+    font-size: 13px;
+  }
+
+  .personalities-grid {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .personality-card:first-child {
+    grid-column: auto;
+  }
+
+  .personality-image {
+    height: 420px;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 380px) {
+  .testimonial-card {
+    min-height: 420px;
+
+    padding: 24px;
+  }
+
+  .testimonial-content p {
+    font-size: 25px;
+  }
+
+  .personality-image {
+    height: 380px;
+  }
+}
+
+/* ========================================
+   DARK MODE EXTRA CONTRAST
+======================================== */
+
+[data-theme="dark"] .testimonial-card {
+  background: #0b120e;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .testimonial-content p {
+  color: #f4f1e9;
+}
+
+[data-theme="dark"] .testimonial-author strong {
+  color: #f4f1e9;
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-controls button,
+  .personality-image img {
+    transition: none;
+  }
+}

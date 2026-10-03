@@ -1,0 +1,545 @@
+.campus-section {
+  position: relative;
+
+  padding: 150px 0;
+
+  overflow: hidden;
+
+  background: var(--bg-primary);
+  color: var(--text-primary);
+
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.campus-header {
+  margin-bottom: 80px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 0.55fr;
+
+  gap: 80px;
+
+  align-items: end;
+}
+
+.campus-label {
+  display: block;
+
+  margin-bottom: 25px;
+
+  color: var(--text-secondary);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2.5px;
+}
+
+.campus-header h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(58px, 7vw, 100px);
+
+  font-weight: 500;
+
+  line-height: 0.9;
+
+  letter-spacing: -3px;
+}
+
+.campus-header h2 em {
+  color: var(--accent);
+
+  font-weight: 500;
+
+  font-style: italic;
+}
+
+.campus-header > p {
+  max-width: 430px;
+
+  margin: 0 0 5px;
+
+  color: var(--text-secondary);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+/* ========================================
+   VISUAL
+======================================== */
+
+.campus-visual {
+  position: relative;
+
+  min-height: 750px;
+}
+
+/* ========================================
+   MAIN IMAGE
+======================================== */
+
+.campus-main-image {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 78%;
+  height: 650px;
+
+  overflow: hidden;
+
+  border-radius: 3px;
+}
+
+.campus-main-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 1s ease;
+}
+
+.campus-main-image:hover img {
+  transform: scale(1.035);
+}
+
+.campus-image-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.12),
+      transparent 45%,
+      rgba(0, 0, 0, 0.55)
+    );
+}
+
+.campus-image-caption {
+  position: absolute;
+
+  left: 25px;
+  right: 25px;
+  bottom: 22px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+/* ========================================
+   INFO CARD
+======================================== */
+
+.campus-info-card {
+  position: absolute;
+
+  top: 150px;
+  right: 0;
+
+  width: min(380px, 35%);
+
+  padding: 35px;
+
+  background: var(--accent-surface);
+
+  color: #f4f1e9;
+
+  z-index: 3;
+
+  box-shadow:
+    0 25px 60px var(--shadow-color);
+
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+.campus-card-icon {
+  width: 42px;
+  height: 42px;
+
+  margin-bottom: 35px;
+
+  display: grid;
+
+  place-items: center;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.25);
+
+  border-radius: 50%;
+}
+
+.campus-card-label {
+  display: block;
+
+  margin-bottom: 13px;
+
+  color: rgba(244, 241, 233, 0.55);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.campus-info-card h3 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 34px;
+
+  font-weight: 500;
+
+  line-height: 1.05;
+}
+
+.campus-info-card p {
+  margin: 24px 0 28px;
+
+  color: rgba(244, 241, 233, 0.68);
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+.campus-info-card a {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  width: fit-content;
+
+  color: #f4f1e9;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  transition: gap 0.3s ease;
+}
+
+.campus-info-card a:hover {
+  gap: 13px;
+}
+
+/* ========================================
+   SMALL IMAGE
+======================================== */
+
+.campus-small-image {
+  position: absolute;
+
+  right: 18%;
+  bottom: 0;
+
+  width: 25%;
+  height: 240px;
+
+  overflow: hidden;
+
+  border: 8px solid var(--bg-primary);
+
+  z-index: 2;
+
+  transition:
+    border-color 0.5s ease;
+}
+
+.campus-small-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+/* ========================================
+   FEATURES
+======================================== */
+
+.campus-features {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  margin-top: 40px;
+
+  border-top: 1px solid var(--border);
+
+  border-left: 1px solid var(--border);
+}
+
+.campus-feature {
+  min-height: 220px;
+
+  padding: 28px;
+
+  border-right: 1px solid var(--border);
+
+  border-bottom: 1px solid var(--border);
+
+  transition:
+    background 0.35s ease,
+    transform 0.35s ease;
+}
+
+.campus-feature:hover {
+  background: var(--bg-secondary);
+
+  transform: translateY(-4px);
+}
+
+.campus-feature > span {
+  display: block;
+
+  margin-bottom: 55px;
+
+  color: var(--text-secondary);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+}
+
+.campus-feature h3 {
+  margin: 0 0 10px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 28px;
+
+  font-weight: 500;
+}
+
+.campus-feature p {
+  max-width: 220px;
+
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+  .campus-section {
+    padding: 110px 0;
+  }
+
+  .campus-header {
+    grid-template-columns: 1fr 0.7fr;
+
+    gap: 45px;
+
+    margin-bottom: 60px;
+  }
+
+  .campus-visual {
+    min-height: 650px;
+  }
+
+  .campus-main-image {
+    width: 78%;
+    height: 560px;
+  }
+
+  .campus-info-card {
+    width: 38%;
+
+    top: 120px;
+
+    padding: 28px;
+  }
+
+  .campus-small-image {
+    right: 15%;
+
+    height: 200px;
+  }
+
+  .campus-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+  .campus-section {
+    padding: 90px 0;
+  }
+
+  .campus-header {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    margin-bottom: 50px;
+  }
+
+  .campus-header h2 {
+    font-size: clamp(46px, 14vw, 65px);
+
+    letter-spacing: -2px;
+  }
+
+  .campus-header > p {
+    font-size: 13px;
+  }
+
+  .campus-visual {
+    min-height: auto;
+
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  .campus-main-image {
+    position: relative;
+
+    width: 100%;
+
+    height: 470px;
+  }
+
+  .campus-image-caption {
+    left: 18px;
+    right: 18px;
+
+    font-size: 8px;
+  }
+
+  .campus-info-card {
+    position: relative;
+
+    top: auto;
+    right: auto;
+
+    width: 88%;
+
+    margin: -70px auto 0;
+
+    padding: 28px;
+
+    z-index: 3;
+  }
+
+  .campus-card-icon {
+    margin-bottom: 25px;
+  }
+
+  .campus-info-card h3 {
+    font-size: 30px;
+  }
+
+  .campus-small-image {
+    position: relative;
+
+    right: auto;
+    bottom: auto;
+
+    width: 70%;
+
+    height: 210px;
+
+    margin: -30px 0 0 auto;
+
+    border-width: 6px;
+
+    z-index: 2;
+  }
+
+  .campus-features {
+    grid-template-columns: 1fr;
+
+    margin-top: 60px;
+  }
+
+  .campus-feature {
+    min-height: 180px;
+
+    padding: 24px;
+  }
+
+  .campus-feature > span {
+    margin-bottom: 35px;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 380px) {
+  .campus-main-image {
+    height: 400px;
+  }
+
+  .campus-info-card {
+    width: 92%;
+
+    padding: 24px;
+  }
+
+  .campus-small-image {
+    width: 76%;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .campus-main-image img,
+  .campus-feature,
+  .campus-info-card a {
+    transition: none;
+  }
+}

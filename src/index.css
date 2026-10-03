@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+
+/* ========================================
+   RESET
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+
+  font-family: "DM Sans", sans-serif;
+
+  background: var(--bg-primary);
+  color: var(--text-primary);
+
+  overflow-x: hidden;
+
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-surface);
+}
+
+/* Firefox */
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--bg-primary);
+}
+
+/* ========================================
+   GLOBAL CONTAINER
+======================================== */
+
+.container {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* ========================================
+   FONTS
+======================================== */
+
+.display-font {
+  font-family: "Playfair Display", serif;
+}
+
+/* ========================================
+   LIGHT THEME
+======================================== */
+
+:root {
+  /* Main backgrounds */
+  --bg-primary: #f5f3ed;
+  --bg-secondary: #ebe8df;
+
+  /* Main text */
+  --text-primary: #151515;
+  --text-secondary: #5f625e;
+
+  /* Accent / highlight */
+  --accent: #1d3028;
+
+  /* Dark sections */
+  --accent-surface: #1d3028;
+
+  /* Soft accent */
+  --accent-soft: #d9dfd8;
+
+  /* Borders */
+  --border: rgba(21, 21, 21, 0.1);
+
+  /* Cards */
+  --card-bg: #f5f3ed;
+
+  /* Shadows */
+  --shadow-color: rgba(0, 0, 0, 0.12);
+}
+
+/* ========================================
+   DARK THEME
+======================================== */
+
+[data-theme="dark"] {
+  /* Main backgrounds */
+  --bg-primary: #101512;
+  --bg-secondary: #18211d;
+
+  /* Main text */
+  --text-primary: #f4f1e9;
+  --text-secondary: #aeb5ae;
+
+  /* Light accent / highlight */
+  --accent: #d8dfd2;
+
+  /* IMPORTANT:
+     Dark sections stay dark */
+  --accent-surface: #0d1410;
+
+  /* Soft accent */
+  --accent-soft: #29352f;
+
+  /* Borders */
+  --border: rgba(255, 255, 255, 0.12);
+
+  /* Cards */
+  --card-bg: #18211d;
+
+  /* Shadows */
+  --shadow-color: rgba(0, 0, 0, 0.35);
+}
+
+/* ========================================
+   MOBILE CONTAINER
+======================================== */
+
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 32px, 1200px);
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

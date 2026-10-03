@@ -1,0 +1,436 @@
+.academics-section {
+  position: relative;
+
+  padding: 140px 0;
+
+  overflow: hidden;
+
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+/* ========================================
+   TOP
+======================================== */
+
+.academics-top {
+  margin-bottom: 75px;
+
+  display: grid;
+
+  grid-template-columns: 1.25fr 0.75fr;
+
+  gap: 80px;
+
+  align-items: end;
+}
+
+.academics-label {
+  display: block;
+
+  margin-bottom: 25px;
+
+  color: var(--text-secondary);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2.5px;
+}
+
+.academics-heading h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(52px, 6.5vw, 92px);
+
+  font-weight: 500;
+
+  line-height: 0.95;
+
+  letter-spacing: -3px;
+}
+
+.academics-heading h2 em {
+  color: var(--accent);
+
+  font-weight: 500;
+
+  font-style: italic;
+}
+
+/* ========================================
+   INTRO
+======================================== */
+
+.academics-intro {
+  padding-bottom: 8px;
+}
+
+.academics-intro p {
+  max-width: 430px;
+
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.academics-explore {
+  width: fit-content;
+
+  margin-top: 25px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: var(--text-primary);
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  border-bottom: 1px solid var(--border);
+
+  padding-bottom: 5px;
+
+  transition:
+    gap 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.academics-explore:hover {
+  gap: 14px;
+
+  border-color: var(--text-primary);
+}
+
+/* ========================================
+   GRID
+======================================== */
+
+.academics-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  border-top: 1px solid var(--border);
+
+  border-left: 1px solid var(--border);
+}
+
+/* ========================================
+   CARD
+======================================== */
+
+.academic-card {
+  position: relative;
+
+  min-height: 430px;
+
+  padding: 28px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: var(--bg-secondary);
+
+  border-right: 1px solid var(--border);
+
+  border-bottom: 1px solid var(--border);
+
+  transition:
+    background 0.4s ease,
+    transform 0.4s ease,
+    color 0.4s ease;
+}
+
+.academic-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: auto 0 0 0;
+
+  height: 0;
+
+  background: var(--accent-surface);
+
+  transition:
+    height 0.5s
+    cubic-bezier(0.22, 1, 0.36, 1);
+
+  z-index: 0;
+}
+
+.academic-card:hover::before {
+  height: 100%;
+}
+
+.academic-card > * {
+  position: relative;
+
+  z-index: 1;
+}
+
+.academic-card:hover {
+  transform: translateY(-6px);
+
+  color: #f4f1e9;
+}
+
+/* ========================================
+   CARD TOP
+======================================== */
+
+.academic-card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.academic-number {
+  color: var(--text-secondary);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  transition: color 0.4s ease;
+}
+
+.academic-icon {
+  width: 46px;
+  height: 46px;
+
+  display: grid;
+
+  place-items: center;
+
+  border: 1px solid var(--border);
+
+  border-radius: 50%;
+
+  color: var(--accent);
+
+  transition:
+    background 0.4s ease,
+    color 0.4s ease,
+    border-color 0.4s ease,
+    transform 0.4s ease;
+}
+
+/* ========================================
+   CARD CONTENT
+======================================== */
+
+.academic-card-content {
+  margin-top: auto;
+}
+
+.academic-card-content h3 {
+  margin: 0 0 18px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 27px;
+
+  font-weight: 500;
+
+  line-height: 1.1;
+}
+
+.academic-card-content p {
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  transition: color 0.4s ease;
+}
+
+/* ========================================
+   ARROW
+======================================== */
+
+.academic-card-arrow {
+  width: 38px;
+  height: 38px;
+
+  margin-top: 28px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  border: 1px solid var(--border);
+
+  color: var(--text-primary);
+
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease,
+    color 0.4s ease,
+    border-color 0.4s ease;
+}
+
+/* ========================================
+   HOVER
+======================================== */
+
+.academic-card:hover .academic-number,
+.academic-card:hover .academic-card-content p {
+  color: rgba(244, 241, 233, 0.7);
+}
+
+.academic-card:hover .academic-icon {
+  color: var(--accent-surface);
+
+  background: #f4f1e9;
+
+  border-color: transparent;
+
+  transform: rotate(-8deg);
+}
+
+.academic-card:hover .academic-card-arrow {
+  color: var(--accent-surface);
+
+  background: #f4f1e9;
+
+  border-color: transparent;
+
+  transform: rotate(45deg);
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1100px) {
+  .academics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .academic-card {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 800px) {
+  .academics-section {
+    padding: 110px 0;
+  }
+
+  .academics-top {
+    margin-bottom: 55px;
+
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .academics-heading h2 {
+    font-size: clamp(50px, 10vw, 75px);
+
+    letter-spacing: -2px;
+  }
+
+  .academics-intro p {
+    max-width: 560px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+  .academics-section {
+    padding: 90px 0;
+  }
+
+  .academics-label {
+    margin-bottom: 20px;
+  }
+
+  .academics-heading h2 {
+    font-size: clamp(43px, 13vw, 60px);
+
+    letter-spacing: -1.5px;
+  }
+
+  .academics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .academic-card {
+    min-height: 320px;
+
+    padding: 24px;
+  }
+
+  .academic-card-content h3 {
+    font-size: 25px;
+  }
+
+  .academic-card-content p {
+    max-width: 400px;
+  }
+
+  .academic-card:hover {
+    transform: none;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 380px) {
+  .academics-heading h2 {
+    font-size: 40px;
+  }
+
+  .academic-card {
+    min-height: 300px;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .academic-card,
+  .academic-card::before,
+  .academic-icon,
+  .academic-card-arrow,
+  .academics-explore {
+    transition: none;
+  }
+}

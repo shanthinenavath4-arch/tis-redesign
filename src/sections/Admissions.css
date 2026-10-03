@@ -1,0 +1,496 @@
+.admissions-section {
+  position: relative;
+
+  padding: 60px 0 150px;
+
+  overflow: hidden;
+
+  background: var(--bg-primary);
+  color: var(--text-primary);
+
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+/* ========================================
+   MAIN ADMISSIONS CONTENT
+======================================== */
+
+.admissions-content {
+  display: grid;
+
+  grid-template-columns: 1fr 0.65fr;
+
+  gap: 100px;
+
+  align-items: end;
+}
+
+/* ========================================
+   LABEL
+======================================== */
+
+.admissions-label {
+  display: block;
+
+  margin-bottom: 25px;
+
+  color: var(--text-secondary);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2.5px;
+}
+
+/* ========================================
+   HEADING
+======================================== */
+
+.admissions-heading h2 {
+  margin: 0;
+
+  color: var(--text-primary);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(60px, 7vw, 105px);
+
+  font-weight: 500;
+
+  line-height: 0.9;
+
+  letter-spacing: -4px;
+}
+
+.admissions-heading h2 em {
+  color: var(--accent);
+
+  font-style: italic;
+
+  font-weight: 500;
+}
+
+/* ========================================
+   COPY
+======================================== */
+
+.admissions-copy {
+  max-width: 500px;
+}
+
+.admissions-intro {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 22px;
+
+  color: var(--text-secondary);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.admissions-intro svg {
+  flex-shrink: 0;
+
+  color: var(--accent);
+}
+
+.admissions-copy > p {
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 15px;
+
+  line-height: 1.85;
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.admissions-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 32px;
+}
+
+.admission-primary,
+.admission-secondary {
+  min-height: 50px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 0 20px;
+
+  border-radius: 100px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.admission-primary {
+  background: var(--accent-surface);
+
+  color: #f4f1e9;
+}
+
+.admission-primary:hover {
+  transform: translateY(-3px);
+
+  background: var(--accent);
+
+  color: var(--bg-primary);
+}
+
+.admission-primary svg {
+  transition: transform 0.3s ease;
+}
+
+.admission-primary:hover svg {
+  transform: rotate(45deg);
+}
+
+.admission-secondary {
+  border: 1px solid var(--border);
+
+  color: var(--text-primary);
+
+  background: transparent;
+}
+
+.admission-secondary:hover {
+  transform: translateY(-3px);
+
+  border-color: var(--accent);
+
+  background: var(--bg-secondary);
+}
+
+/* ========================================
+   INFO GRID
+======================================== */
+
+.admission-info-grid {
+  margin-top: 90px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  border-top: 1px solid var(--border);
+
+  border-bottom: 1px solid var(--border);
+}
+
+.admission-info {
+  min-height: 120px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 25px 30px;
+
+  border-right: 1px solid var(--border);
+}
+
+.admission-info:first-child {
+  padding-left: 0;
+}
+
+.admission-info-last {
+  border-right: none;
+
+  padding-right: 0;
+}
+
+.admission-info-icon {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border: 1px solid var(--border);
+
+  border-radius: 50%;
+
+  color: var(--accent);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.admission-info:hover
+.admission-info-icon {
+  background: var(--accent-surface);
+
+  color: #f4f1e9;
+
+  transform: translateY(-2px);
+}
+
+.admission-info div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.admission-info span {
+  color: var(--text-secondary);
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.admission-info strong {
+  color: var(--text-primary);
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+/* ========================================
+   CLOSING LINE
+======================================== */
+
+.admissions-closing {
+  margin-top: 55px;
+
+  padding-top: 22px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  border-top: 1px solid var(--border);
+
+  color: var(--text-secondary);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.8px;
+
+  text-transform: uppercase;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+  .admissions-section {
+    padding: 50px 0 110px;
+  }
+
+  .admissions-content {
+    grid-template-columns: 1fr 0.7fr;
+
+    gap: 50px;
+  }
+
+  .admissions-heading h2 {
+    font-size: clamp(55px, 8vw, 82px);
+
+    letter-spacing: -3px;
+  }
+
+  .admission-info {
+    padding: 22px 18px;
+
+    gap: 12px;
+  }
+
+  .admission-info strong {
+    font-size: 11px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+  .admissions-section {
+    padding: 40px 0 90px;
+  }
+
+  .admissions-content {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    align-items: start;
+  }
+
+  .admissions-label {
+    margin-bottom: 20px;
+  }
+
+  .admissions-heading h2 {
+    font-size: clamp(48px, 14vw, 68px);
+
+    line-height: 0.92;
+
+    letter-spacing: -2px;
+  }
+
+  .admissions-copy {
+    max-width: 100%;
+  }
+
+  .admissions-copy > p {
+    font-size: 13px;
+
+    line-height: 1.75;
+  }
+
+  .admissions-actions {
+    margin-top: 26px;
+
+    flex-wrap: wrap;
+  }
+
+  .admission-primary,
+  .admission-secondary {
+    min-height: 47px;
+
+    padding: 0 16px;
+
+    font-size: 10.5px;
+  }
+
+  .admission-info-grid {
+    margin-top: 60px;
+
+    grid-template-columns: 1fr;
+
+    border-bottom: none;
+  }
+
+  .admission-info,
+  .admission-info:first-child,
+  .admission-info-last {
+    min-height: 90px;
+
+    padding: 20px 0;
+
+    border-right: none;
+
+    border-bottom: 1px solid var(--border);
+  }
+
+  .admission-info-last {
+    border-bottom: none;
+  }
+
+  .admissions-closing {
+    margin-top: 40px;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    font-size: 8px;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+  .admissions-section {
+    padding: 35px 0 80px;
+  }
+
+  .admissions-heading h2 {
+    font-size: clamp(44px, 14vw, 58px);
+
+    letter-spacing: -1.5px;
+  }
+
+  .admissions-intro {
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .admissions-actions {
+    width: 100%;
+
+    gap: 9px;
+  }
+
+  .admission-primary,
+  .admission-secondary {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 0 12px;
+
+    font-size: 10px;
+  }
+
+  .admission-info strong {
+    font-size: 11px;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .admission-primary,
+  .admission-secondary,
+  .admission-info-icon,
+  .admission-primary svg {
+    transition: none;
+  }
+}
